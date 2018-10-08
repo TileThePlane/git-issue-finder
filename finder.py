@@ -2,8 +2,8 @@ import requests
 import bs4
 
 # search language "l=python"
-# search page "p=#"
-# search issue "type=Issues"
+# search page "&p=#"
+# search issue "&type=Issues"
 # starts query "&q="
     # query label 'label%3A"good+first+issue"'
     # query archived "archived%3Afalse
