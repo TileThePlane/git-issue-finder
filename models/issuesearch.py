@@ -81,3 +81,5 @@ class IssueSearch(Base):
 
         except KeyError:
             return self.labels.append(label)
+
+print(IssueSearch().to_dict())

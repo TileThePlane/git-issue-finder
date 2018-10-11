@@ -2,7 +2,7 @@ from inspect import isfunction
 from time import mktime, strptime
 
 def repr_wrap(v):
-    if isfunction(v):
+    if isfunction(v) or isinstance(v, staticmethod):
         return v.__doc__
 
     return v
