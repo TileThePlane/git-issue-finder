@@ -15,14 +15,14 @@ BASE_URL = 'https://github.com/search?'
 
 class IssueSearch(Base):
 
-    _language = ['Language(s) to be searched for.']
-    _is_archived = 'Flag to include archived issues. Default false; to not return archived issues.'
-    _is_open = 'Flag to include open or closed issues. Default True; to return open issues'
-    _users = ['Include issues created for projects belonging to some user(s).']
-    _orgs = ['Include issues created for projects belonging to some org(s) or org group.']
-    _labels = ['Include issues with some label(s).']
-    _page = 'Tracks current results page.'
-    _type = 'Choose pr or issue or pr and issue. Default to show both pr and issues.'
+    language = ['Language(s) to be searched for.']
+    is_archived = 'Flag to include archived issues. Default false; to not return archived issues.'
+    is_open = 'Flag to include open or closed issues. Default True; to return open issues'
+    users = ['Include issues created for projects belonging to some user(s).']
+    orgs = ['Include issues created for projects belonging to some org(s) or org group.']
+    labels = ['Include issues with some label(s).']
+    page = 'Tracks current results page.'
+    type = 'Choose pr or issue or pr and issue. Default to show both pr and issues.'
 
     def __init__(self, languages=[], users=[], orgs=[],labels=[], is_open=True, is_archived=False, page=1, type='issueandpr'):
         self.languages = languages
