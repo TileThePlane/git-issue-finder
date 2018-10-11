@@ -1,443 +1,443 @@
-LANGUAGES = '''1c-enterprise
-abap
-abnf
-actionscript
-ada
-agda
-ags-script
-alloy
-alpine-abuild
-ampl
-ant-build-system
-antlr
-apacheconf
-apex
-api-blueprint
-apl
-apollo-guidance-computer
-applescript
-arc
-arduino
-asciidoc
-asp
-aspectj
-assembly
-ats
-augeas
-autohotkey
-autoit
-awk
-batchfile
-befunge
-bison
-bitbake
-blade
-blitzbasic
-blitzmax
-bluespec
-boo
-brainfuck
-brightscript
-bro
-c
-c%23
-c%2B%2B
-c-objdump
-cartocss
-ceylon
-chapel
-charity
-chuck
-cirru
-clarion
-clean
-click
-clips
-clojure
-cmake
-cobol
-coffeescript
-coldfusion
-coldfusion-cfc
-collada
-common-lisp
-component-pascal
-cool
-coq
-cpp-objdump
-creole
-crystal
-cson
-csound
-csound-document
-csound-score
-css
-csv
-gherkin
-cuda
-cycript
-cython
-d
-d-objdump
-darcs-patch
-dart
-desktop
-diff
-digital-command-language
-dm
-dns-zone
-dockerfile
-dogescript
-dtrace
-dylan
-e
-eagle
-ebnf
-ec
-ecere-projects
-ecl
-eclipse
-edn
-eiffel
-ejs
-elixir
-elm
-emacs-lisp
-emberscript
-eq
-erlang
-f%23
-factor
-fancy
-fantom
-filebench-wml
-filterscript
-fish
-flux
-formatted
-forth
-fortran
-freemarker
-frege
-g-code
-game-maker-language
-gams
-gap
-gcc-machine-description
-gdb
-gdscript
-genie
-genshi
-gentoo-ebuild
-gentoo-eclass
-gettext-catalog
-gherkin
-glsl
-glyph
-gn
-gnuplot
-go
-golo
-gosu
-grace
-gradle
-grammatical-framework
-graph-modeling-language
-graphql
-graphviz
-groovy
-groovy-server-pages
-hack
-haml
-handlebars
-harbour
-haskell
-haxe
-hcl
-hlsl
-html
-http
-hy
-hyphy
-idl
-idris
-igor-pro
-inform-7
-ini
-inno-setup
-io
-ioke
-irc-log
-isabelle
-isabelle-root
-j
-jasmin
-java
-java-server-pages
-javascript
-jflex
-json
-json5
-jsoniq
-jsonld
-jsx
-julia
-jupyter-notebook
-kicad
-kit
-kotlin
-krl
-labview
-lasso
-latte
-lean
-less
-lex
-lfe
-lilypond
-limbo
-linker-script
-linux-kernel-module
-liquid
-literate-agda
-literate-coffeescript
-literate-haskell
-livescript
-llvm
-logos
-logtalk
-lolcode
-lookml
-loomscript
-lsl
-lua
-m
-m4
-m4sugar
-makefile
-mako
-markdown
-mask
-mathematica
-matlab
-maven-pom
-max
-maxscript
-mediawiki
-mercury
-meson
-metal
-minid
-mirah
-modelica
-modula-2
-module-management-system
-monkey
-moocode
-moonscript
-mql4
-mql5
-mtml
-muf
-mupad
-myghty
-ncl
-nemerle
-nesc
-netlinx
-netlinx+erb
-netlogo
-newlisp
-nginx
-nim
-ninja
-nit
-nix
-nl
-nsis
-nu
-numpy
-objdump
-objective-c
-objective-c++
-objective-j
-ocaml
-omgrofl
-ooc
-opa
-opal
-opencl
-openedge-abl
-openrc-runscript
-openscad
-opentype-feature-file
-org
-ox
-oxygene
-oz
-p4
-pan
-papyrus
-parrot
-parrot-assembly
-parrot-internal-representation
-pascal
-pawn
-perl
-perl6
-php
-pic
-pickle
-picolisp
-piglatin
-pike
-plpgsql
-plsql
-pod
-pogoscript
-pony
-postscript
-pov-ray-sdl
-powerbuilder
-powershell
-processing
-prolog
-propeller-spin
-protocol-buffer
-public-key
-pug
-puppet
-pure-data
-purebasic
-purescript
-python
-python-console
-python-traceback
-qmake
-qml
-r
-racket
-ragel
-raml
-rascal
-raw-token-data
-rdoc
-realbasic
-reason
-rebol
-red
-redcode
-ren'py
-renderscript
-restructuredtext
-rexx
-rhtml
-rmarkdown
-robotframework
-roff
-rouge
-rpm-spec
-ruby
-runoff
-rust
-sage
-saltstack
-sas
-sass
-scala
-scaml
-scheme
-scilab
-scss
-self
-shell
-shellsession
-shen
-slash
-slim
-smali
-smalltalk
-smarty
-smt
-sourcepawn
-sparql
-spline-font-database
-sqf
-sql
-sqlpl
-squirrel
-srecode-template
-stan
-standard-ml
-stata
-ston
-stylus
-sublime-text-config
-subrip-text
-supercollider
-svg
-swift
-systemverilog
-tcl
-tcsh
-tea
-terra
-tex
-text
-textile
-thrift
-ti-program
-tla
-toml
-turing
-turtle
-twig
-txl
-typescript
-unified-parallel-c
-unity3d-asset
-unix-assembly
-uno
-unrealscript
-urweb
-vala
-vcl
-verilog
-vhdl
-vim-script
-vim-script
-visual-basic
-volt
-vue
-wavefront-material
-wavefront-object
-web-ontology-language
-webidl
-wisp
-world-of-warcraft-addon-data
-x10
-xbase
-xc
-xcompose
-xml
-xojo
-xpages
-xproc
-xquery
-xs
-xslt
-xtend
-yacc
-yaml
-yang
-zephir
-zimpl'''
+import pprint
 
-DEFAULT_LABELS = '''bug
-duplicate
-enhancement
-good first issue
-help wanted
-invalid
-question
-wontfix'''
+LANGUAGES = {'1c-enterprise': '1c-enterprise',
+ 'abap': 'abap',
+ 'abnf': 'abnf',
+ 'actionscript': 'actionscript',
+ 'ada': 'ada',
+ 'agda': 'agda',
+ 'ags-script': 'ags-script',
+ 'alloy': 'alloy',
+ 'alpine-abuild': 'alpine-abuild',
+ 'ampl': 'ampl',
+ 'ant-build-system': 'ant-build-system',
+ 'antlr': 'antlr',
+ 'apacheconf': 'apacheconf',
+ 'apex': 'apex',
+ 'api-blueprint': 'api-blueprint',
+ 'apl': 'apl',
+ 'apollo-guidance-computer': 'apollo-guidance-computer',
+ 'applescript': 'applescript',
+ 'arc': 'arc',
+ 'arduino': 'arduino',
+ 'asciidoc': 'asciidoc',
+ 'asp': 'asp',
+ 'aspectj': 'aspectj',
+ 'assembly': 'assembly',
+ 'ats': 'ats',
+ 'augeas': 'augeas',
+ 'autohotkey': 'autohotkey',
+ 'autoit': 'autoit',
+ 'awk': 'awk',
+ 'batchfile': 'batchfile',
+ 'befunge': 'befunge',
+ 'bison': 'bison',
+ 'bitbake': 'bitbake',
+ 'blade': 'blade',
+ 'blitzbasic': 'blitzbasic',
+ 'blitzmax': 'blitzmax',
+ 'bluespec': 'bluespec',
+ 'boo': 'boo',
+ 'brainfuck': 'brainfuck',
+ 'brightscript': 'brightscript',
+ 'bro': 'bro',
+ 'c': 'c',
+ 'c#': 'c%23',
+ 'c++': 'c%2B%2B',
+ 'c-objdump': 'c-objdump',
+ 'cartocss': 'cartocss',
+ 'ceylon': 'ceylon',
+ 'chapel': 'chapel',
+ 'charity': 'charity',
+ 'chuck': 'chuck',
+ 'cirru': 'cirru',
+ 'clarion': 'clarion',
+ 'clean': 'clean',
+ 'click': 'click',
+ 'clips': 'clips',
+ 'clojure': 'clojure',
+ 'cmake': 'cmake',
+ 'cobol': 'cobol',
+ 'coffeescript': 'coffeescript',
+ 'coldfusion': 'coldfusion',
+ 'coldfusion-cfc': 'coldfusion-cfc',
+ 'collada': 'collada',
+ 'common-lisp': 'common-lisp',
+ 'component-pascal': 'component-pascal',
+ 'cool': 'cool',
+ 'coq': 'coq',
+ 'cpp-objdump': 'cpp-objdump',
+ 'creole': 'creole',
+ 'crystal': 'crystal',
+ 'cson': 'cson',
+ 'csound': 'csound',
+ 'csound-document': 'csound-document',
+ 'csound-score': 'csound-score',
+ 'css': 'css',
+ 'csv': 'csv',
+ 'cuda': 'cuda',
+ 'cycript': 'cycript',
+ 'cython': 'cython',
+ 'd': 'd',
+ 'd-objdump': 'd-objdump',
+ 'darcs-patch': 'darcs-patch',
+ 'dart': 'dart',
+ 'desktop': 'desktop',
+ 'diff': 'diff',
+ 'digital-command-language': 'digital-command-language',
+ 'dm': 'dm',
+ 'dns-zone': 'dns-zone',
+ 'dockerfile': 'dockerfile',
+ 'dogescript': 'dogescript',
+ 'dtrace': 'dtrace',
+ 'dylan': 'dylan',
+ 'e': 'e',
+ 'eagle': 'eagle',
+ 'ebnf': 'ebnf',
+ 'ec': 'ec',
+ 'ecere-projects': 'ecere-projects',
+ 'ecl': 'ecl',
+ 'eclipse': 'eclipse',
+ 'edn': 'edn',
+ 'eiffel': 'eiffel',
+ 'ejs': 'ejs',
+ 'elixir': 'elixir',
+ 'elm': 'elm',
+ 'emacs-lisp': 'emacs-lisp',
+ 'emberscript': 'emberscript',
+ 'eq': 'eq',
+ 'erlang': 'erlang',
+ 'f#': 'f%23',
+ 'factor': 'factor',
+ 'fancy': 'fancy',
+ 'fantom': 'fantom',
+ 'filebench-wml': 'filebench-wml',
+ 'filterscript': 'filterscript',
+ 'fish': 'fish',
+ 'flux': 'flux',
+ 'formatted': 'formatted',
+ 'forth': 'forth',
+ 'fortran': 'fortran',
+ 'freemarker': 'freemarker',
+ 'frege': 'frege',
+ 'g-code': 'g-code',
+ 'game-maker-language': 'game-maker-language',
+ 'gams': 'gams',
+ 'gap': 'gap',
+ 'gcc-machine-description': 'gcc-machine-description',
+ 'gdb': 'gdb',
+ 'gdscript': 'gdscript',
+ 'genie': 'genie',
+ 'genshi': 'genshi',
+ 'gentoo-ebuild': 'gentoo-ebuild',
+ 'gentoo-eclass': 'gentoo-eclass',
+ 'gettext-catalog': 'gettext-catalog',
+ 'gherkin': 'gherkin',
+ 'glsl': 'glsl',
+ 'glyph': 'glyph',
+ 'gn': 'gn',
+ 'gnuplot': 'gnuplot',
+ 'go': 'go',
+ 'golo': 'golo',
+ 'gosu': 'gosu',
+ 'grace': 'grace',
+ 'gradle': 'gradle',
+ 'grammatical-framework': 'grammatical-framework',
+ 'graph-modeling-language': 'graph-modeling-language',
+ 'graphql': 'graphql',
+ 'graphviz': 'graphviz',
+ 'groovy': 'groovy',
+ 'groovy-server-pages': 'groovy-server-pages',
+ 'hack': 'hack',
+ 'haml': 'haml',
+ 'handlebars': 'handlebars',
+ 'harbour': 'harbour',
+ 'haskell': 'haskell',
+ 'haxe': 'haxe',
+ 'hcl': 'hcl',
+ 'hlsl': 'hlsl',
+ 'html': 'html',
+ 'http': 'http',
+ 'hy': 'hy',
+ 'hyphy': 'hyphy',
+ 'idl': 'idl',
+ 'idris': 'idris',
+ 'igor-pro': 'igor-pro',
+ 'inform-7': 'inform-7',
+ 'ini': 'ini',
+ 'inno-setup': 'inno-setup',
+ 'io': 'io',
+ 'ioke': 'ioke',
+ 'irc-log': 'irc-log',
+ 'isabelle': 'isabelle',
+ 'isabelle-root': 'isabelle-root',
+ 'j': 'j',
+ 'jasmin': 'jasmin',
+ 'java': 'java',
+ 'java-server-pages': 'java-server-pages',
+ 'javascript': 'javascript',
+ 'jflex': 'jflex',
+ 'json': 'json',
+ 'json5': 'json5',
+ 'jsoniq': 'jsoniq',
+ 'jsonld': 'jsonld',
+ 'jsx': 'jsx',
+ 'julia': 'julia',
+ 'jupyter-notebook': 'jupyter-notebook',
+ 'kicad': 'kicad',
+ 'kit': 'kit',
+ 'kotlin': 'kotlin',
+ 'krl': 'krl',
+ 'labview': 'labview',
+ 'lasso': 'lasso',
+ 'latte': 'latte',
+ 'lean': 'lean',
+ 'less': 'less',
+ 'lex': 'lex',
+ 'lfe': 'lfe',
+ 'lilypond': 'lilypond',
+ 'limbo': 'limbo',
+ 'linker-script': 'linker-script',
+ 'linux-kernel-module': 'linux-kernel-module',
+ 'liquid': 'liquid',
+ 'literate-agda': 'literate-agda',
+ 'literate-coffeescript': 'literate-coffeescript',
+ 'literate-haskell': 'literate-haskell',
+ 'livescript': 'livescript',
+ 'llvm': 'llvm',
+ 'logos': 'logos',
+ 'logtalk': 'logtalk',
+ 'lolcode': 'lolcode',
+ 'lookml': 'lookml',
+ 'loomscript': 'loomscript',
+ 'lsl': 'lsl',
+ 'lua': 'lua',
+ 'm': 'm',
+ 'm4': 'm4',
+ 'm4sugar': 'm4sugar',
+ 'makefile': 'makefile',
+ 'mako': 'mako',
+ 'markdown': 'markdown',
+ 'mask': 'mask',
+ 'mathematica': 'mathematica',
+ 'matlab': 'matlab',
+ 'maven-pom': 'maven-pom',
+ 'max': 'max',
+ 'maxscript': 'maxscript',
+ 'mediawiki': 'mediawiki',
+ 'mercury': 'mercury',
+ 'meson': 'meson',
+ 'metal': 'metal',
+ 'minid': 'minid',
+ 'mirah': 'mirah',
+ 'modelica': 'modelica',
+ 'modula-2': 'modula-2',
+ 'module-management-system': 'module-management-system',
+ 'monkey': 'monkey',
+ 'moocode': 'moocode',
+ 'moonscript': 'moonscript',
+ 'mql4': 'mql4',
+ 'mql5': 'mql5',
+ 'mtml': 'mtml',
+ 'muf': 'muf',
+ 'mupad': 'mupad',
+ 'myghty': 'myghty',
+ 'ncl': 'ncl',
+ 'nemerle': 'nemerle',
+ 'nesc': 'nesc',
+ 'netlinx': 'netlinx',
+ 'netlinx+erb': 'netlinx+erb',
+ 'netlogo': 'netlogo',
+ 'newlisp': 'newlisp',
+ 'nginx': 'nginx',
+ 'nim': 'nim',
+ 'ninja': 'ninja',
+ 'nit': 'nit',
+ 'nix': 'nix',
+ 'nl': 'nl',
+ 'nsis': 'nsis',
+ 'nu': 'nu',
+ 'numpy': 'numpy',
+ 'objdump': 'objdump',
+ 'objective-c': 'objective-c',
+ 'objective-c++': 'objective-c%2B%2B',
+ 'objective-j': 'objective-j',
+ 'ocaml': 'ocaml',
+ 'omgrofl': 'omgrofl',
+ 'ooc': 'ooc',
+ 'opa': 'opa',
+ 'opal': 'opal',
+ 'opencl': 'opencl',
+ 'openedge-abl': 'openedge-abl',
+ 'openrc-runscript': 'openrc-runscript',
+ 'openscad': 'openscad',
+ 'opentype-feature-file': 'opentype-feature-file',
+ 'org': 'org',
+ 'ox': 'ox',
+ 'oxygene': 'oxygene',
+ 'oz': 'oz',
+ 'p4': 'p4',
+ 'pan': 'pan',
+ 'papyrus': 'papyrus',
+ 'parrot': 'parrot',
+ 'parrot-assembly': 'parrot-assembly',
+ 'parrot-internal-representation': 'parrot-internal-representation',
+ 'pascal': 'pascal',
+ 'pawn': 'pawn',
+ 'perl': 'perl',
+ 'perl6': 'perl6',
+ 'php': 'php',
+ 'pic': 'pic',
+ 'pickle': 'pickle',
+ 'picolisp': 'picolisp',
+ 'piglatin': 'piglatin',
+ 'pike': 'pike',
+ 'plpgsql': 'plpgsql',
+ 'plsql': 'plsql',
+ 'pod': 'pod',
+ 'pogoscript': 'pogoscript',
+ 'pony': 'pony',
+ 'postscript': 'postscript',
+ 'pov-ray-sdl': 'pov-ray-sdl',
+ 'powerbuilder': 'powerbuilder',
+ 'powershell': 'powershell',
+ 'processing': 'processing',
+ 'prolog': 'prolog',
+ 'propeller-spin': 'propeller-spin',
+ 'protocol-buffer': 'protocol-buffer',
+ 'public-key': 'public-key',
+ 'pug': 'pug',
+ 'puppet': 'puppet',
+ 'pure-data': 'pure-data',
+ 'purebasic': 'purebasic',
+ 'purescript': 'purescript',
+ 'python': 'python',
+ 'python-console': 'python-console',
+ 'python-traceback': 'python-traceback',
+ 'qmake': 'qmake',
+ 'qml': 'qml',
+ 'r': 'r',
+ 'racket': 'racket',
+ 'ragel': 'ragel',
+ 'raml': 'raml',
+ 'rascal': 'rascal',
+ 'raw-token-data': 'raw-token-data',
+ 'rdoc': 'rdoc',
+ 'realbasic': 'realbasic',
+ 'reason': 'reason',
+ 'rebol': 'rebol',
+ 'red': 'red',
+ 'redcode': 'redcode',
+ "ren'py": "ren'py",
+ 'renderscript': 'renderscript',
+ 'restructuredtext': 'restructuredtext',
+ 'rexx': 'rexx',
+ 'rhtml': 'rhtml',
+ 'rmarkdown': 'rmarkdown',
+ 'robotframework': 'robotframework',
+ 'roff': 'roff',
+ 'rouge': 'rouge',
+ 'rpm-spec': 'rpm-spec',
+ 'ruby': 'ruby',
+ 'runoff': 'runoff',
+ 'rust': 'rust',
+ 'sage': 'sage',
+ 'saltstack': 'saltstack',
+ 'sas': 'sas',
+ 'sass': 'sass',
+ 'scala': 'scala',
+ 'scaml': 'scaml',
+ 'scheme': 'scheme',
+ 'scilab': 'scilab',
+ 'scss': 'scss',
+ 'self': 'self',
+ 'shell': 'shell',
+ 'shellsession': 'shellsession',
+ 'shen': 'shen',
+ 'slash': 'slash',
+ 'slim': 'slim',
+ 'smali': 'smali',
+ 'smalltalk': 'smalltalk',
+ 'smarty': 'smarty',
+ 'smt': 'smt',
+ 'sourcepawn': 'sourcepawn',
+ 'sparql': 'sparql',
+ 'spline-font-database': 'spline-font-database',
+ 'sqf': 'sqf',
+ 'sql': 'sql',
+ 'sqlpl': 'sqlpl',
+ 'squirrel': 'squirrel',
+ 'srecode-template': 'srecode-template',
+ 'stan': 'stan',
+ 'standard-ml': 'standard-ml',
+ 'stata': 'stata',
+ 'ston': 'ston',
+ 'stylus': 'stylus',
+ 'sublime-text-config': 'sublime-text-config',
+ 'subrip-text': 'subrip-text',
+ 'supercollider': 'supercollider',
+ 'svg': 'svg',
+ 'swift': 'swift',
+ 'systemverilog': 'systemverilog',
+ 'tcl': 'tcl',
+ 'tcsh': 'tcsh',
+ 'tea': 'tea',
+ 'terra': 'terra',
+ 'tex': 'tex',
+ 'text': 'text',
+ 'textile': 'textile',
+ 'thrift': 'thrift',
+ 'ti-program': 'ti-program',
+ 'tla': 'tla',
+ 'toml': 'toml',
+ 'turing': 'turing',
+ 'turtle': 'turtle',
+ 'twig': 'twig',
+ 'txl': 'txl',
+ 'typescript': 'typescript',
+ 'unified-parallel-c': 'unified-parallel-c',
+ 'unity3d-asset': 'unity3d-asset',
+ 'unix-assembly': 'unix-assembly',
+ 'uno': 'uno',
+ 'unrealscript': 'unrealscript',
+ 'urweb': 'urweb',
+ 'vala': 'vala',
+ 'vcl': 'vcl',
+ 'verilog': 'verilog',
+ 'vhdl': 'vhdl',
+ 'vim-script': 'vim-script',
+ 'visual-basic': 'visual-basic',
+ 'volt': 'volt',
+ 'vue': 'vue',
+ 'wavefront-material': 'wavefront-material',
+ 'wavefront-object': 'wavefront-object',
+ 'web-ontology-language': 'web-ontology-language',
+ 'webidl': 'webidl',
+ 'wisp': 'wisp',
+ 'world-of-warcraft-addon-data': 'world-of-warcraft-addon-data',
+ 'x10': 'x10',
+ 'xbase': 'xbase',
+ 'xc': 'xc',
+ 'xcompose': 'xcompose',
+ 'xml': 'xml',
+ 'xojo': 'xojo',
+ 'xpages': 'xpages',
+ 'xproc': 'xproc',
+ 'xquery': 'xquery',
+ 'xs': 'xs',
+ 'xslt': 'xslt',
+ 'xtend': 'xtend',
+ 'yacc': 'yacc',
+ 'yaml': 'yaml',
+ 'yang': 'yang',
+ 'zephir': 'zephir',
+ 'zimpl': 'zimpl'}
+
+DEFAULT_LABELS = { 1: 'bug',
+2: 'duplicate',
+3: 'enhancement',
+4: 'good first issue',
+5: 'help wanted',
+6: 'invalid',
+7: 'question',
+8: 'wontfix' }
