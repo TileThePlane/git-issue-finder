@@ -15,7 +15,11 @@ import argparse
 
 if __name__ == "__main__":
     print("Github Issue Search: helping you find relevant issues on github.")
-    print("For a complete list of arguments try: gif help")
+    print("For a complete list of arguments try: help")
+    while True:
+
+
+
 
 
 issue_request_url = ('https://github.com/search?'
